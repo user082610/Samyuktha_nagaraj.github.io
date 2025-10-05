@@ -1,346 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Samyuktha Nagaraj Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* ABOUT */
-    .about-mf .box-shadow-full {
-      padding: 4rem 0;
-    }
-
-    .about-mf .about-img img {
-      margin-left: 10px;
-    }
-
-    .skill-mf .progress {
-      margin: .5rem 0 1.2rem 0;
-      border-radius: 0;
-      height: .7rem;
-    }
-
-    .skill-mf .progress .progress-bar {
-      height: .7rem;
-      background-color: #ffbd39;
-    }
-
-    /* Typing animation */
-    #typing-animation {
-      position: relative;
-      font-size: 30px;
-      font-weight: bold;
-      color: #fff;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3s steps(20, end) infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    /* Zoom effect for projects */
-    .zoom-effect {
-      overflow: hidden;
-      transition: transform 0.3s ease-out;
-    }
-
-    .zoom-effect:hover {
-      transform: scale(1.08);
-    }
-
-    /* Adjust hero and about spacing */
-    #home-section {
-      margin-bottom: -80px; /* reduce gap */
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samyuktha Nagaraj | AI/ML Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Samyuktha Nagaraj</a>
-      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-        data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
-
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-        </ul>
-      </div>
+      <a href="#" class="logo">Samyuktha Nagaraj</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home-section" class="hero">
-    <div class="home-slider owl-carousel">
-      <div class="slider-item">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-            <div class="one-third js-fullheight order-md-last img" style="background-image: url(images/bg_1.jpg);">
-              <div class="overlay"></div>
-            </div>
-            <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-              <div class="text">
-                <span class="subheading">Hello!</span>
-                <h1 class="mb-4 mt-3">I'm <span>Samyuktha Nagaraj</span></h1>
-                <span id="typing-animation"></span>
-                <script>
-                  const typingAnimationElement = document.getElementById('typing-animation');
-                  const typingTexts = ['AI Enthusiast', 'ML Engineer', 'Data Enthusiast'];
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Samyuktha Nagaraj</span></h1>
+      <h2 class="role">AI/ML Engineer</h2>
+      <p>Building Intelligent Systems that make a difference</p>
+    </div>
+  </section>
 
-                  function playTypingAnimation(text) {
-                    for (let i = 0; i < text.length; i++) {
-                      setTimeout(() => {
-                        typingAnimationElement.textContent += text[i];
-                      }, i * 150);
-                    }
-                    setTimeout(() => {
-                      typingAnimationElement.textContent = '';
-                      playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                    }, text.length * 150 + 1000);
-                  }
-                  playTypingAnimation(typingTexts[0]);
-                </script>
-
-                <br><br>
-                <h2>AI ML Engineer (Fresher)</h2>
-              </div>
-            </div>
-          </div>
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-content">
+      <img src="images/about-me.png" alt="Samyuktha Nagaraj" class="about-img" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am an <strong>AI and ML Engineer</strong> passionate about designing intelligent solutions that merge technology and creativity.
+          I hold a Master’s degree in Artificial Intelligence from the University of Kent and a Bachelor’s in AI & ML from Bangalore Institute of Technology.
+        </p>
+        <div class="skills">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>Keras</span>
+          <span>Scikit-learn</span>
+          <span>React JS</span>
+          <span>Machine Learning</span>
+          <span>Deep Learning</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <!-- Projects -->
+  <section id="projects" class="projects">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-5 d-flex">
-          <div class="img-about img d-flex align-items-stretch">
-            <div class="overlay">
-              <div class="about-img text-center">
-                <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-              </div>
-              <div class="about-info mt-4">
-                <p><span class="title-s">Name: </span> Samyuktha Nagaraj</p>
-                <p><span class="title-s">Job Role: </span> AI ML Engineer (Fresher)</p>
-                <p><span class="title-s">Experience: </span> 6 Months Internship (React Js)</p>
-                <p><span class="title-s">Address: </span> London, UK</p>
-              </div>
-              <div class="skill-mf mt-4">
-                <p class="title-s">Skills</p>
-                <span>Python</span><br>
-                <span>TensorFlow</span><br>
-                <span>Artificial Intelligence</span><br>
-                <span>Machine Learning</span><br>
-                <span>React JS</span>
-              </div>
-            </div>
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <!-- Diabetic Retinopathy -->
+        <div class="project-card">
+          <img src="images/8640_left.jpeg" alt="Diabetic Retinopathy Detection">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Diabetic-Retinopathy">Diabetic Retinopathy Detection</a></h3>
+            <p>Deep learning-based model to detect diabetic retinopathy from retinal fundus images using CNN.</p>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-          <h1 class="big">About</h1>
-          <h2 class="mb-4">About Me</h2>
-          <p>I am an AI and ML Engineer passionate about designing intelligent systems that merge creativity with technology. With a strong foundation in data analysis, model building, and front-end development, I strive to make a meaningful impact through AI-driven solutions.</p>
-          <ul class="about-info mt-4 px-md-0 px-2">
-            <li class="d-flex"><span>Profile:</span> <span>AI ML Engineer</span></li>
-            <li class="d-flex"><span>Education:</span> <span>Master in AI</span></li>
-            <li class="d-flex"><span>Language:</span> <span>English, Kannada, Hindi</span></li>
-            <li class="d-flex"><span>Other Skills:</span> <span>Keras, Scikit-learn, Pandas, NumPy</span></li>
-            <li class="d-flex"><span>Interest:</span> <span>Traveling, Teaching</span></li>
-          </ul>
-          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-            <div class="text">
-              <p class="mb-4"><span class="number" data-number="7">0</span> <span>+</span> <span>&nbsp;Projects Completed</span></p>
-            </div>
+        <div class="project-card">
+          <img src="images/proj_1.jpg" alt="Alzheimer’s Detection">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Alzheimer-s-detection">Alzheimer’s Detection</a></h3>
+            <p>AI-powered system for early detection of Alzheimer's disease using deep learning techniques.</p>
           </div>
         </div>
+
+        <div class="project-card">
+          <img src="images/proj_2.jpg" alt="BPD Detection">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Detection-of-BPD">AI Model for BPD Detection</a></h3>
+            <p>AI-based system to identify and analyze bronchopulmonary dysplasia in infants.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/proj_3.jpg" alt="Cancer Categorization">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/categorising-cancer-profiles">Cancer Profile Categorization</a></h3>
+            <p>Deep learning model to classify cancer cell profiles using CNN and image analysis.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/proj_4.jpg" alt="Dog Breed Prediction">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Dog-Breed-Prediction">Dog Breed Prediction</a></h3>
+            <p>Using CNN architecture to identify and classify dog breeds with precision.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/proj_5.jpg" alt="Emotion Recognition">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Emotion-Recognition">Emotion Recognition</a></h3>
+            <p>Facial emotion recognition using convolutional neural networks and deep learning techniques.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/proj_6.jpg" alt="Skin Cancer Detection">
+          <div class="card-body">
+            <h3><a href="https://github.com/user082610/Skin-Cancer-Detection">Skin Cancer Detection</a></h3>
+            <p>Leveraging CNN models for efficient and accurate skin cancer detection.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/revolt-chat.jpg" alt="Revolt Chat App">
+          <div class="card-body">
+            <h3><a href="YOUR_GITHUB_LINK_HERE">Revolt Chat Application</a></h3>
+            <p>Full-stack chat application built with React.js, Node.js, and Socket.io for real-time messaging.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="ftco-section" id="project-section">
+  <!-- Contact -->
+  <section id="contact" class="contact">
     <div class="container">
-      <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Projects</h1>
-          <h2 class="mb-4">Projects</h2>
-          <p>Below are some of my AI & ML projects.</p>
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Bangalore, India</p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p><a href="tel:+919611570390">+91 9611570390</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p><a href="mailto:samyukthagowda2002@gmail.com">samyukthagowda2002@gmail.com</a></p>
         </div>
       </div>
 
-      <div class="row d-flex">
-        <!-- Diabetic Retinopathy Detection -->
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="https://github.com/user082610/Diabetic-Retinopathy-Detection" class="block-20 zoom-effect" style="background-image: url('images/8640_left.jpeg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Diabetic-Retinopathy-Detection">Diabetic Retinopathy Detection</a></h3>
-              <p>Developed a CNN-based model to detect diabetic retinopathy from retinal fundus images, enhancing early diagnosis and treatment planning.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Revolt Chat Project -->
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="YOUR_GITHUB_LINK_HERE" class="block-20 zoom-effect" style="background-image: url('images/revolt_chat.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="YOUR_GITHUB_LINK_HERE">Revolt Chat Application</a></h3>
-              <p>A real-time chat web application with authentication, socket communication, and user presence tracking using React, Node.js, and Firebase.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Alzheimer’s Detection -->
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="https://github.com/user082610/Alzheimer-s-detection" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Alzheimer-s-detection">Detection of Alzheimer's</a></h3>
-              <p>Explored causes, detection methods, and machine learning approaches to identify Alzheimer’s from MRI data.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br>
-      <div class="row d-flex">
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="https://github.com/user082610/Detection-of-BPD" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Detection-of-BPD">AI Model for Bronchopulmonary Dysplasia</a></h3>
-              <p>Used AI to diagnose and manage bronchopulmonary dysplasia, improving patient outcomes through predictive analysis.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="https://github.com/user082610/categorising-cancer-profiles" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/categorising-cancer-profiles">Categorising Cancer Profiles</a></h3>
-              <p>Diagnosed cancer cells in MRI scans using CNN and deep learning, aiding efficient cancer profiling.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="https://github.com/user082610/Dog-Breed-Prediction" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Dog-Breed-Prediction">Dog Breed Prediction</a></h3>
-              <p>Built a CNN model to detect and classify dog breeds from images with high accuracy.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="https://github.com/user082610/Emotion-Recognition" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Emotion-Recognition">Emotion Recognition using Deep Learning</a></h3>
-              <p>Used CNN models to recognize human emotions from facial expressions in real-time.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="https://github.com/user082610/Skin-Cancer-Detection" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="https://github.com/user082610/Skin-Cancer-Detection">Skin Cancer Detection</a></h3>
-              <p>Applied deep learning to improve the accuracy and speed of skin cancer image analysis.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="https://drive.google.com/file/d/1qmd3iSsRxe4UUJO_tO4CLqafAIr2Jweg/view?usp=sharing" class="resume-btn">
+        <i class="fas fa-download"></i> Download Resume
+      </a>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Contact</h1>
-          <h2 class="mb-4">Contact Me</h2>
-          <p>Below are the details to reach out to me!</p>
-        </div>
-      </div>
-      <div class="row d-flex contact-info mb-5">
-        <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-map-signs"></span>
-            </div>
-            <h3 class="mb-4">Address</h3>
-            <p>Bangalore, India</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-phone2"></span>
-            </div>
-            <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel://9611570390">+91 9611570390</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-paper-plane"></span>
-            </div>
-            <h3 class="mb-4">Email Address</h3>
-            <p><a href="mailto:samyukthagowda2002@gmail.com">samyukthagowda2002@gmail.com</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-globe"></span>
-            </div>
-            <h3 class="mb-4">Download CV</h3>
-            <p><a href="https://drive.google.com/file/d/1qmd3iSsRxe4UUJO_tO4CLqafAIr2Jweg/view?usp=sharing">Resume Link</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <footer>
+    © 2025 Samyuktha Nagaraj | Designed with ❤️
+  </footer>
 
 </body>
 </html>
