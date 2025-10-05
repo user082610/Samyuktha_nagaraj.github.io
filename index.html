@@ -6,63 +6,70 @@
   <title>Samyuktha Nagaraj | AI/ML Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
-    /* Reset & Global */
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body {background:#0f111a;color:#e0e0e0;line-height:1.6;scroll-behavior:smooth;}
-    a {text-decoration:none;color:inherit;}
-    img {max-width:100%;display:block;}
-    .container {width:90%;max-width:1200px;margin:0 auto;}
+    /* Global */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#0f111a;color:#e0e0e0;line-height:1.6;scroll-behavior:smooth;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+    .container{width:90%;max-width:1200px;margin:0 auto;}
 
     /* Navbar */
-    nav {position:fixed;top:0;width:100%;background:#111227;box-shadow:0 2px 10px rgba(0,0,0,0.5);z-index:1000;}
-    nav .container {display:flex;justify-content:space-between;align-items:center;padding:15px 0;}
-    nav .logo {font-weight:700;font-size:1.5rem;color:#00d1ff;}
-    nav ul {list-style:none;display:flex;gap:25px;}
-    nav ul li a {font-weight:500;color:#e0e0e0;transition:0.3s;}
-    nav ul li a:hover {color:#00d1ff;}
+    nav{position:fixed;top:0;width:100%;background:#111227;box-shadow:0 2px 10px rgba(0,0,0,0.5);z-index:1000;}
+    nav .container{display:flex;justify-content:space-between;align-items:center;padding:15px 0;}
+    nav .logo{font-weight:700;font-size:1.5rem;color:#00d1ff;}
+    nav ul{list-style:none;display:flex;gap:25px;}
+    nav ul li a{font-weight:500;color:#e0e0e0;transition:0.3s;}
+    nav ul li a:hover{color:#00d1ff;}
 
     /* Hero */
-    .hero {height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#111227;flex-direction:column;padding:0 20px;}
-    .hero h1 {font-size:3rem;margin-bottom:15px;}
-    .hero h1 span {color:#00d1ff;font-weight:700;}
-    .hero h2 {font-size:1.5rem;margin-bottom:20px;font-weight:500;color:#a0a0a0;}
-    .hero p {font-size:1.2rem;max-width:600px;margin:0 auto;color:#c0c0c0;}
+    .hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#111227;flex-direction:column;padding:0 20px;}
+    .hero h1{font-size:3rem;margin-bottom:15px;}
+    .hero h1 span{color:#00d1ff;font-weight:700;}
+    .hero h2{font-size:1.5rem;margin-bottom:20px;font-weight:500;color:#a0a0a0;}
+    .hero p{font-size:1.2rem;max-width:600px;margin:0 auto;color:#c0c0c0;}
+    #typing-animation{font-weight:600;color:#00d1ff;font-size:1.2rem;margin-top:10px;}
 
     /* Sections */
-    section {padding:100px 0;}
-    h2.section-title {text-align:center;font-size:2rem;margin-bottom:60px;position:relative;color:#00d1ff;}
-    h2.section-title::after {content:'';width:60px;height:4px;background:#00d1ff;display:block;margin:10px auto 0;border-radius:2px;}
+    section{padding:100px 0;}
+    h2.section-title{text-align:center;font-size:2rem;margin-bottom:60px;color:#00d1ff;}
+    h2.section-title::after{content:'';width:60px;height:4px;background:#00d1ff;display:block;margin:10px auto 0;border-radius:2px;}
 
     /* About */
-    .about-content {display:flex;align-items:center;gap:60px;flex-wrap:wrap;justify-content:center;}
-    .about-content img {width:320px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.5);}
-    .about-text {max-width:600px;}
-    .about-text p {margin-bottom:20px;font-size:1rem;color:#c0c0c0;}
-    .skills {display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;}
-    .skills span {background:#00d1ff;color:#111227;padding:8px 18px;border-radius:25px;font-weight:500;font-size:0.9rem;transition:0.3s;}
-    .skills span:hover {transform:scale(1.05);}
+    .about-content{display:flex;align-items:center;gap:60px;flex-wrap:wrap;justify-content:center;}
+    .about-content img{width:320px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.5);}
+    .about-text{max-width:600px;}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;}
+    .skills span{background:#00d1ff;color:#111227;padding:8px 18px;border-radius:25px;font-weight:500;font-size:0.9rem;transition:0.3s;}
+    .skills span:hover{transform:scale(1.05);}
+
+    /* Resume */
+    .resume-wrap{background:#1a1c33;padding:20px;border-radius:15px;margin-bottom:20px;}
+    .resume-wrap span.date{color:#00d1ff;font-weight:600;}
+    .resume-wrap h2{margin:10px 0;color:#fff;}
+    .resume-wrap span.position{color:#c0c0c0;}
 
     /* Projects */
-    .project-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
-    .project-card {background:#1a1c33;border-radius:20px;overflow:hidden;box-shadow:0 15px 25px rgba(0,0,0,0.5);transition:transform 0.3s, box-shadow 0.3s;}
-    .project-card:hover {transform:translateY(-10px);box-shadow:0 25px 35px rgba(0,0,0,0.7);}
-    .project-card img {height:200px;object-fit:cover;}
-    .card-body {padding:20px;}
-    .card-body h3 {margin-bottom:10px;font-size:1.2rem;color:#00d1ff;}
-    .card-body h3 a {color:#00d1ff;}
-    .card-body p {color:#c0c0c0;font-size:0.95rem;}
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+    .project-card{background:#1a1c33;border-radius:20px;overflow:hidden;box-shadow:0 15px 25px rgba(0,0,0,0.5);transition:transform 0.3s, box-shadow 0.3s;}
+    .project-card:hover{transform:translateY(-10px);box-shadow:0 25px 35px rgba(0,0,0,0.7);}
+    .project-card img{height:200px;object-fit:cover;}
+    .card-body{padding:20px;}
+    .card-body h3{margin-bottom:10px;font-size:1.2rem;color:#00d1ff;}
+    .card-body h3 a{color:#00d1ff;}
+    .card-body p{color:#c0c0c0;font-size:0.95rem;}
 
     /* Contact */
-    .contact-grid {display:flex;flex-wrap:wrap;gap:40px;justify-content:center;margin-bottom:40px;}
-    .contact-item {display:flex;align-items:center;gap:15px;font-size:1rem;color:#c0c0c0;}
-    .contact-item i {color:#00d1ff;font-size:1.5rem;}
-    .contact-item a {color:#00d1ff;}
-    .resume-btn {display:inline-block;padding:12px 25px;background:#00d1ff;color:#111227;border-radius:12px;font-weight:500;transition:0.3s;}
-    .resume-btn:hover {background:#00a1cc;transform:scale(1.05);}
+    .contact-grid{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;margin-bottom:40px;}
+    .contact-item{display:flex;align-items:center;gap:15px;font-size:1rem;color:#c0c0c0;}
+    .contact-item i{color:#00d1ff;font-size:1.5rem;}
+    .contact-item a{color:#00d1ff;}
+    .resume-btn{display:inline-block;padding:12px 25px;background:#00d1ff;color:#111227;border-radius:12px;font-weight:500;transition:0.3s;}
+    .resume-btn:hover{background:#00a1cc;transform:scale(1.05);}
 
     /* Footer */
-    footer {text-align:center;padding:30px 0;background:#111227;color:#c0c0c0;font-size:0.9rem;}
+    footer{text-align:center;padding:30px 0;background:#111227;color:#c0c0c0;font-size:0.9rem;}
 
     /* Responsive */
     @media(max-width:768px){.about-content{flex-direction:column;text-align:center;}.about-content img{margin-bottom:20px;}}
@@ -70,6 +77,7 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav>
     <div class="container">
       <a href="#" class="logo">Samyuktha Nagaraj</a>
@@ -82,18 +90,21 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <section id="home" class="hero">
     <h1>Hi, I'm <span>Samyuktha Nagaraj</span></h1>
     <h2>AI/ML Engineer</h2>
     <p>Building Intelligent Systems that make a difference</p>
+    <span id="typing-animation"></span>
   </section>
 
+  <!-- About -->
   <section id="about" class="about container">
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <img src="images/about-me.png" alt="Samyuktha Nagaraj">
       <div class="about-text">
-        <p>I am an <strong>AI/ML Engineer</strong> passionate about intelligent solutions. Masters in AI from University of Kent, Bachelor’s in AI & ML from Bangalore Institute of Technology.</p>
+        <p>Masters in AI from University of Kent and Bachelor's in AI & ML from Bangalore Institute of Technology. Proficient in Python, TensorFlow, Keras, Scikit-learn, React JS, and Machine Learning.</p>
         <div class="skills">
           <span>Python</span>
           <span>TensorFlow</span>
@@ -107,39 +118,86 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="projects container">
     <h2 class="section-title">Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <img src="images/8640_left.jpeg" alt="Diabetic Retinopathy">
+        <img src="images/proj_1.jpg" alt="Detection of Alzheimers">
         <div class="card-body">
-          <h3><a href="https://github.com/user082610/diabetic_retinopathy" target="_blank">Diabetic Retinopathy</a></h3>
-          <p>Detect diabetic retinopathy from retinal fundus images using CNN.</p>
+          <h3><a href="https://github.com/user082610/Alzheimer-s-detection" target="_blank">Detection of Alzheimers</a></h3>
+          <p>Unraveling Alzheimers explores the causes, detection methods, and strategies to combat the impact of this progressive neurological disease.</p>
         </div>
       </div>
       <div class="project-card">
-        <img src="images/revolt_chat.jpg" alt="Revolt Chat">
+        <img src="images/proj_2.jpg" alt="BPD AI Model">
         <div class="card-body">
-          <h3><a href="https://github.com/user082610/revolt-chat" target="_blank">Revolt Chat App</a></h3>
-          <p>Full-stack chat application using React.js, Node.js, Socket.io.</p>
+          <h3><a href="https://github.com/user082610/Detection-of-BPD" target="_blank">AI based model for Bronchopulmonary Dysplasia</a></h3>
+          <p>Using AI to diagnose, manage, and improve outcomes in bronchopulmonary dysplasia.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj_3.jpg" alt="Cancer Profiles">
+        <div class="card-body">
+          <h3><a href="https://github.com/user082610/categorising-cancer-profiles" target="_blank">Categorising Cancer Profiles</a></h3>
+          <p>Diagnosing and detecting cancer cells in blood reports and MRI scans using CNN and deep learning techniques.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj_4.jpg" alt="Dog Breed Prediction">
+        <div class="card-body">
+          <h3><a href="https://github.com/user082610/Dog-Breed-Prediction" target="_blank">Dog Breed Prediction</a></h3>
+          <p>Using CNN model to detect and recognise dog breeds via prediction models.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj_5.jpg" alt="Emotion Recognition">
+        <div class="card-body">
+          <h3><a href="https://github.com/user082610/Emotion-Recognition" target="_blank">Emotion Recognition using Deep Learning</a></h3>
+          <p>Leveraging deep learning techniques to recognise facial expressions.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/proj_6.jpg" alt="Skin Cancer Detection">
+        <div class="card-body">
+          <h3><a href="https://github.com/user082610/Skin-Cancer-Detection" target="_blank">Skin Cancer Detection</a></h3>
+          <p>Using deep learning techniques to enhance the accuracy and efficiency of skin cancer detection.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact container">
     <h2 class="section-title">Contact Me</h2>
     <div class="contact-grid">
       <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Bangalore, India</p></div>
       <div class="contact-item"><i class="fas fa-phone"></i><p><a href="tel:+919611570390">+91 9611570390</a></p></div>
       <div class="contact-item"><i class="fas fa-envelope"></i><p><a href="mailto:samyukthagowda2002@gmail.com">samyukthagowda2002@gmail.com</a></p></div>
+      <div class="contact-item"><i class="fas fa-download"></i><p><a href="https://drive.google.com/file/d/1qmd3iSsRxe4UUJO_tO4CLqafAIr2Jweg/view?usp=sharing" target="_blank">Download CV</a></p></div>
     </div>
-    <a href="https://drive.google.com/file/d/1qmd3iSsRxe4UUJO_tO4CLqafAIr2Jweg/view?usp=sharing" class="resume-btn" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
   </section>
 
-  <footer>
-    © 2025 Samyuktha Nagaraj | Designed with ❤️
-  </footer>
+  <!-- Footer -->
+  <footer>© 2025 Samyuktha Nagaraj | Designed with ❤️</footer>
+
+  <!-- Typing Animation -->
+  <script>
+    const typingTexts = ["AI Enthusiast", "Machine Learning Developer", "Deep Learning Explorer"];
+    const typingElement = document.getElementById('typing-animation');
+    let index = 0;
+    let charIndex = 0;
+    function type() {
+      if (charIndex < typingTexts[index].length) {
+        typingElement.textContent += typingTexts[index][charIndex];
+        charIndex++;
+        setTimeout(type, 150);
+      } else {
+        setTimeout(() => { typingElement.textContent = ''; charIndex=0; index=(index+1)%typingTexts.length; type(); }, 1500);
+      }
+    }
+    type();
+  </script>
 
 </body>
 </html>
